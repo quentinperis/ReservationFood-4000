@@ -1,6 +1,6 @@
 <template>
   <div class="shopping-cart-container">
-    <div v-if="cart && cart.length">
+    <div v-if="cart.length">
       <h2>Panier</h2>
       <ul>
         <li v-for="item in cart" :key="item.id">
@@ -9,7 +9,7 @@
           <button @click="removeFromCart(item)">Retirer</button>
         </li>
       </ul>
-      <div v-if="cart.length">
+      <div>
         <strong>Total: ${{ totalPrice }}</strong>
       </div>
     </div>
@@ -48,7 +48,7 @@ export default {
 
 <style scoped>
 .shopping-cart-container {
-  position: sticky;
+  position: fixed;
   top: 16px; 
   right: 16px;
   max-width: 300px;

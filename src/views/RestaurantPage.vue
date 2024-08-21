@@ -38,6 +38,7 @@
       />
     </div>
 
+    <!-- Unique ShoppingCart Component -->
     <ShoppingCart :cart="cart" @remove-from-cart="handleRemoveFromCart" />
   </div>
 </template>
@@ -182,36 +183,170 @@ export default {
   }
 }
 </script>
-
 <style scoped>
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .restaurant-image {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
   height: auto;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin: 24px auto;
+}
+
+.restaurant-image:hover {
+  transform: scale(1.05);
 }
 
 button {
-  margin: 16px;
-  padding: 8px 16px;
+  padding: 12px 24px;
   border: none;
-  background-color: #007bff;
+  background-color: rgb(63, 192, 96);
   color: white;
-  border-radius: 4px;
+  border-radius: 50px;
   cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+  margin: 16px 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: rgb(55, 214, 95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #222;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #666;
 }
 
 h3 {
-  margin-top: 24px;
-  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 48px;
+  margin-bottom: 24px;
+  color: #444;
+  text-align: center;
 }
 
-div {
-  margin-bottom: 24px;
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.dish-card {
+  display: inline-block;
+  text-align: center;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(33.333% - 16px);
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dish-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dish-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+}
+
+.dish-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 16px 0 8px 0;
+  color: #333;
+}
+
+.dish-card p {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #777;
+}
+
+.dish-card button {
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #1d72b8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dish-card button:hover {
+  background-color: #155a8a;
+}
+
+.shopping-cart {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  position: fixed;
+  right: 24px;
+  top: 24px;
+}
+
+@media (max-width: 768px) {
+  .dish-card {
+    width: calc(50% - 16px);
+  }
+
+  .shopping-cart {
+    width: 100%;
+    max-width: 100%;
+    position: static;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dish-card {
+    width: 100%;
+  }
 }
 </style>

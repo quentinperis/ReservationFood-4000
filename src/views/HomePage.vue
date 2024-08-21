@@ -9,18 +9,18 @@
     />
     
     <RestaurantList :restaurants="filteredRestaurants" />
-        <ShoppingCart :cart="cart" @remove-from-cart="removeFromCart" />
+        <!-- <ShoppingCart :cart="cart" @remove-from-cart="removeFromCart" /> -->
   </div>
 </template>
 
 <script>
 import RestaurantList from '@/components/RestaurantList.vue'
-import ShoppingCart from '@/components/ShoppingCart.vue'
+// import ShoppingCart from '@/components/ShoppingCart.vue'
 export default {
   name: 'HomePage',
   components: {
     RestaurantList,
-    ShoppingCart
+    // ShoppingCart
   },
   data() {
     return {

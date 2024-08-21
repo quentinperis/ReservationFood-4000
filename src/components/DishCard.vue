@@ -35,5 +35,27 @@
     object-fit: cover;
     border-radius: 8px;
   }
+
+
+  button {
+  padding: 12px 24px;
+  border: none;
+  background-color: rgb(63, 192, 96);
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+  margin: 16px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: rgb(55, 214, 95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
   </style>
   
