@@ -23,20 +23,22 @@
   }
   </script>
   
-  <style scoped>.restaurant-card {
+  <style scoped>
+
+  .restaurant-card {
     display: inline-block;
-    width: 30%; /* Taille fixe pour chaque carte */
-    height: 400px; /* Hauteur fixe pour uniformiser toutes les cartes */
+    width: 30%; 
+    height: 500px; 
     border: 1px solid #0d9c0034;
     border-radius: 12px;
     padding: 24px;
-    margin: 12px; /* Ajouter un espacement uniforme entre les cartes */
+    margin: 12px; 
     text-align: center;
-    background-color: #ffffff;
+    background-color: #000000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    vertical-align: top; /* Assure l'alignement des cartes */
-    position: relative; /* Assure que le bouton reste à l'intérieur de la carte */
+    vertical-align: top; 
+    position: relative; 
   }
   
   .restaurant-card:hover {
@@ -45,9 +47,9 @@
   }
   
   .restaurant-image {
-    width: 80%; /* Taille de l'image en proportion de la carte */
-    height: 150px; /* Hauteur fixe pour uniformiser les images */
-    object-fit: cover; /* Assure que l'image reste proportionnelle tout en remplissant l'espace */
+    width: 80%; 
+    height: 250px; 
+    object-fit: cover; 
     border-radius: 12px;
     margin-bottom: 16px;
     transition: opacity 0.3s ease;
@@ -60,36 +62,39 @@
   h3 {
     font-size: 1.5em;
     font-weight: 600;
+    font-family: monospace;
+    color: #ffffff;
     margin-bottom: 12px;
-    color: #333333;
-    overflow: hidden; /* Empêche le débordement du texte */
+    overflow: hidden; 
     text-overflow: ellipsis;
-    white-space: nowrap; /* Assure que le titre ne prenne qu'une ligne */
+    white-space: nowrap; 
   }
   
   p {
     font-size: 1em;
-    color: #666666;
+    font-family: monospace;
+    color: #ffffff;
     margin-bottom: 16px;
   }
   
   .view-details {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: rgb(63, 192, 96);
     text-decoration: none;
     border-radius: 8px;
-    font-weight: 500;
+    font-family: monospace;
+    font-weight: bold;
+    color: #ffffff;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    position: absolute; /* Pour placer le bouton en bas de la carte */
+    position: absolute; 
     bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
   }
   
   .view-details:hover {
-    background-color: #0056b3;
+    background-color: rgb(40, 223, 85);
     transform: translate(-50%, -4px);
   }
   

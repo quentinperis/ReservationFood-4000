@@ -22,20 +22,31 @@
   </script>
   
   <style scoped>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
   .dish-card {
     border: 1px solid #ddd;
     padding: 16px;
     border-radius: 8px;
-    width: 200px;
+    width: 400px;
     text-align: center;
+    background-color: black;
+    
   }
   .dish-image {
     width: 100%;
-    height: 120px;
+    height: 220px;
     object-fit: cover;
     border-radius: 8px;
   }
-
+h4, p {
+  font-family: monospace;
+    color: #FFFFFF;
+}
 
   button {
   padding: 12px 24px;

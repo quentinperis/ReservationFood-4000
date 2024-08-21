@@ -17,6 +17,11 @@
   </script>
   
   <style scoped>
+  *{
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+}
   .restaurant-card {
     border: 1px solid #ddd;
     padding: 16px;

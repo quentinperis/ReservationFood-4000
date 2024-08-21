@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="restaurantdishes">
     <button @click="goBack">Retour à la liste des restaurants</button>
     <h2>{{ restaurant.name }}</h2>
     <p>Cuisine: {{ restaurant.cuisine }}</p>
@@ -87,8 +87,8 @@ export default {
       const allRestaurants = [
         { 
           id: 1, 
-          name: 'Pizza Place', 
-          cuisine: 'Italian', 
+          name: 'Fratello', 
+          cuisine: 'Italien', 
           image: require('@/assets/img/pizzeria/restaurant-pizza.jpg'), 
           dishes: [
             { id: 1, name: 'Margherita Pizza', price: 12, image: require('@/assets/img/pizzeria/pizza-margherita.jpg') },
@@ -108,7 +108,7 @@ export default {
         },
         { 
           id: 2, 
-          name: 'Sushi Spot', 
+          name: 'Sushi Shooop', 
           cuisine: 'Japanese', 
           image: require('@/assets/img/sushi/restaurant-sushi.jpg'), 
           dishes: [
@@ -129,7 +129,7 @@ export default {
         },
         { 
           id: 3, 
-          name: 'Burger Joint', 
+          name: 'Burgerland', 
           cuisine: 'American', 
           image: require('@/assets/img/burger/restaurant-burger.jpg'), 
           dishes: [
@@ -150,7 +150,7 @@ export default {
         },
         { 
           id: 4, 
-          name: 'Mexican Fiesta', 
+          name: 'El Paraiso del tacos', 
           cuisine: 'Mexican', 
           image: require('@/assets/img/mexican/restaurant-mexican.jpg'), 
           dishes: [
@@ -184,9 +184,15 @@ export default {
 }
 </script>
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f5f7fa;
+  background-color: #000000;
   color: #333;
   margin: 0;
   padding: 0;
@@ -194,6 +200,12 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+
+.restaurantdishes {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
 }
 
 .restaurant-image {
@@ -221,8 +233,9 @@ button {
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  font-size: 16px;
-  font-weight: 500;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
   display: inline-block;
   margin: 16px 0;
   text-align: center;
@@ -239,14 +252,16 @@ h2 {
   font-weight: 700;
   margin-bottom: 8px;
   text-align: center;
-  color: #222;
+  font-family: monospace;
+    color: #ffffff;
 }
 
 p {
   font-size: 18px;
   margin-bottom: 24px;
   text-align: center;
-  color: #666;
+  font-family: monospace;
+    color: #ffffff;
 }
 
 h3 {
@@ -254,8 +269,9 @@ h3 {
   font-weight: 600;
   margin-top: 48px;
   margin-bottom: 24px;
-  color: #444;
   text-align: center;
+  font-family: monospace;
+    color: #ffffff;
 }
 
 .section {
@@ -269,13 +285,14 @@ h3 {
 .dish-card {
   display: inline-block;
   text-align: center;
-  background-color: white;
+  background-color: #000000;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: calc(33.333% - 16px);
   max-width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 5px
 }
 
 .dish-card:hover {
